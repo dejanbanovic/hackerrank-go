@@ -35,7 +35,7 @@ func compareTriplets(a []int32, b []int32) []int32 {
 func main() {
 	reader := bufio.NewReaderSize(os.Stdin, 16*1024*1024)
 
-	stdout, err := os.Create(os.Getenv("OUTPUT_PATH"))
+	stdout, err := os.Create("./result.txt")
 	checkError(err)
 
 	defer stdout.Close()
