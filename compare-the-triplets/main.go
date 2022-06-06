@@ -19,8 +19,17 @@ import (
  */
 
 func compareTriplets(a []int32, b []int32) []int32 {
-	// Write your code here
-
+	result := []int32{0, 0}
+	for i := 0; i < 3; i++ {
+		// Just check cases where Alice and Bobs rating differ and increment accordingly
+		if a[i] > b[i] {
+			result[0] = result[0] + 1
+		}
+		if a[i] < b[i] {
+			result[1] = result[1] + 1
+		}
+	}
+	return result
 }
 
 func main() {
